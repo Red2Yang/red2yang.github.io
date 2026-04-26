@@ -1,0 +1,68 @@
+/* 调整侧边栏整体字体大小 */
+.md-sidebar--primary .md-nav__title,
+.md-sidebar--primary .md-nav__link {
+  font-size: 0.95rem;  
+  line-height: 1.5;    
+}
+
+/* 侧边栏当前活动链接加粗或高亮 */
+.md-nav__link--active {
+  font-weight: 600;
+  color: var(--md-accent-fg-color); /* 使用主题强调色 */
+}
+
+/* 调整侧边栏标题样式 */
+.md-nav__title {
+  font-size: 0.95rem;
+  font-weight: 600;
+  letter-spacing: 0.3px; /* 略微增加字间距 */
+  color: var(--md-primary-fg-color);
+}
+
+/* 侧边栏宽度 */
+@media screen and (min-width: 76.25em) {
+  .md-sidebar--primary {
+    width: 10rem;      
+  }
+  .md-sidebar--secondary {
+    width: 10rem;
+  }
+}
+
+/* 目录样式 */
+.md-nav--secondary .md-nav__link {
+  color: var(--md-default-fg-color); /* 使用主要文字颜色 */
+}
+
+/* 默认是 1220px，适当放宽 */
+.md-grid {
+  max-width: 1600px; 
+}
+
+/* 标题 */
+.md-typeset h1,
+.md-typeset h2,
+.md-typeset h3,
+.md-typeset h4,
+.md-typeset h5,
+.md-typeset h6 {
+  color: var(--md-default-fg-color);
+  font-weight: 600;
+}
+
+/* 调整正文内容字体大小和行高 */
+.md-content {
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+/* 调整代码块字体 */
+.md-typeset code {
+  font-size: 16px;
+}
+
+/* 增大 Admonition 内部文字（不包括标题） */
+.md-typeset .admonition :not(.admonition-title) {
+  font-size: 16px;  
+  line-height: 1.5;
+}
