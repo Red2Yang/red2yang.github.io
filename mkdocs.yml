@@ -1,0 +1,105 @@
+#[Info]
+site_name: RY的Github文档（Beta）
+site_url: red2yang.github.io
+repo_name: red2yang.github.io
+repo_url: https://github.com/Red2Yang/red2yang.github.io/
+
+theme:
+  name: material
+  language: zh  # 界面语言
+  #favicon: assets/images/webico.ico  # 网站图标
+  #logo: assets/images/weblogo.jpg  # 导航栏 Logo
+  palette:
+    #primary: blue grey
+    - scheme: default # 日间模式
+      primary: grey # 上方的
+      accent: cyan # 链接等可交互元件的高亮色
+      toggle:
+        icon: material/weather-night # 图标
+        name: 切换至夜间主题
+    - scheme: slate # 夜间模式
+      primary: black 
+      accent: cyan
+      toggle:
+        icon: material/weather-sunny
+        name: 切换至日间主题
+  font:
+    text: Open Sans  # 正文字体
+    code: Source Code Pro  # 代码字体
+  icon:
+    repo: fontawesome/brands/github  # 仓库图标
+    admonition:
+      note: octicons/tag-16
+      tip: octicons/light-bulb-16
+  features:
+    - navigation.tabs      # 顶部标签式导航
+    #- navigation.sections  # 侧边栏按节分组
+    - navigation.top       # 回到顶部按钮
+    #- navigation.tracking  # 导航锚点
+    #- navigation.path      # 导航路径显示
+    #- navigation.prune     # 减少导航渲染
+    - navigation.indexes   # 导航显示index页面
+    #- toc.follow           # 目录跟随
+    - toc.integrate        # 导航与目录整合
+    - search.suggest       # 搜索建议
+    - search.highlight     # 搜索结果高亮
+    - content.tabs.link    # 内容标签页链接
+
+
+markdown_extensions:
+  - meta              # 支持Markdown文件上方自定义标题标签等
+  - tables
+  # Python Markdown
+  - abbr
+  - admonition
+  - attr_list
+  - def_list
+  - footnotes
+  - md_in_html
+  - toc:
+      permalink: true # 固定标题位置为当前位置
+  # Python Markdown Extensions
+  - pymdownx.arithmatex: # latex支持
+      generic: true
+  - pymdownx.betterem:
+      smart_enable: all
+  - pymdownx.caret
+  - pymdownx.details
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - pymdownx.highlight: # 代码块高亮
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+      linenums: false    # 不显示行号
+      auto_title: true  # 显示编程语言名称
+  - pymdownx.inlinehilite
+  - pymdownx.keys
+  - pymdownx.mark
+  - pymdownx.smartsymbols
+  - pymdownx.superfences
+  - pymdownx.tabbed:    # 内容选项卡
+      alternate_style: true
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.tilde
+  - pymdownx.critic
+  - pymdownx.snippets
+  - pymdownx.blocks.caption
+
+
+plugins:
+  - search
+  - offline
+
+extra_css:
+  - assets/css/extra.css
+extra_javascript:
+  - assets/js/extra.js
+  - assets/js/mathjax.js
+  - https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js
+
+extra:
+  generator: false
+copyright: Copyright &copy; 2026 赤之未来. 内容采用CC-BY-NC-SA 4.0协议.
